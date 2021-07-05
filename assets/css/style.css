@@ -1,0 +1,8 @@
+* {
+    margin: 0;padding: 0;
+    box-sizing: border-box; /* inclui tamanho da borda, padding */
+}
+header {
+    height: 100px;background: #000;
+}
+.header { max-width: 1140px; height: 100px;background: #f00;margin: auto;}
