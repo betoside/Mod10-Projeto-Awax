@@ -1,8 +1,101 @@
+:root {
+    --marrom-padrao: #b28756;
+    --preto: #000;
+    --branco: #fff;
+    --vermelho: #f00;
+    --banner-transparente: rgba(0, 0, 0, 0.65);
+}
 * {
     margin: 0;padding: 0;
     box-sizing: border-box; /* inclui tamanho da borda, padding */
 }
+body {
+    font-family: 'Montserat', Arial, Helvetica, sans-serif;
+    font-size: 13px;
+}
 header {
     height: 100px;background: #000;
 }
-.header { max-width: 1140px; height: 100px;background: #f00;margin: auto;}
+.header { 
+    max-width: 1140px; height: 100px;margin: auto;display: flex;align-items: center;
+}
+.logo { 
+    width: 100px; padding-left: 10px;
+}
+.logoimg { 
+    width: 80px;height: 80px;background-color: var(--marrom-padrao); 
+    border-radius: 40px;
+}
+.menu {
+    flex: 1; display: flex;justify-content:flex-end;
+}
+.menu ul,
+.menu li {
+    list-style: none;
+}
+.menu ul {
+    display: flex;
+}
+.menu li a {
+    color: #fff;text-transform: uppercase;font-weight: bold;text-decoration: none;
+    padding-left: 10px;padding-right: 10px;height: 100px;
+    display: flex;align-items: center;
+    border-bottom: 5px solid var(--preto);
+    font-weight: 600;
+}
+.menu .active a,
+.menu li a:hover {
+    border-bottom: 5px solid var(--marrom-padrao);
+    color: #ccc;
+}
+
+/* 
+Banner, o conteúdo precisa ser exibido no meio do monitor, ou
+no meio da área disponível podendo ser monitor, celular, tablet.
+Vamos usar o calc()
+primeiro de tudo montar a estrutura pra isso acontecer
+*/
+.banner {
+    background: var(--vermelho);background-image: url(../images/bg.jpg);
+    background-size: cover; /* preencher o espaco sem distorcer*/ 
+    background-position: bottom;
+    height: calc(100vh - 100px); overflow: hidden;
+}
+.banner .sliders {
+    width: 1000vw; height: 100%;
+}
+.banner .slide {
+    width: 100vw;height: 100%;display: inline-block;
+    background-color: var(--banner-transparente);
+}
+.banner .slide .slide-area {
+    height: 100%;color: var(--branco);
+    display: flex;align-items: center;justify-content: center;flex-direction: column;
+}
+.banner h1 {
+    text-transform: uppercase;font-weight: bold;font-size: 40px;
+}
+.banner h1 span {
+    color: var(--marrom-padrao);
+}
+.banner h2 {
+    text-transform: uppercase;font-weight: bold;margin-top: 20px;
+}
+.banner a {
+    display: block;background-color: var(--marrom-padrao);color: var(--branco);
+    text-transform: uppercase;font-size: 12px;text-decoration: none;font-weight: 600;
+    padding: 10px 30px;margin-top: 30px;
+    border-radius: 15px;
+}
+.banner .sliders-pointers {
+    width: 100vw;height: 15px;
+    position: absolute;margin-top: -50px;
+    display: flex;justify-content: center;align-items: center;
+}
+.banner .pointer {
+    width: 15px;height: 15px;margin: 0 5px;cursor: pointer;
+    border: 2px solid var(--marrom-padrao);border-radius: 8px;
+}
+.banner .pointer.active {
+    background-color: var(--marrom-padrao);
+}
