@@ -19,7 +19,7 @@
 body {
     font-family: 'Montserat', Arial, Helvetica, sans-serif;
     font-size: 13px;
-    /* overflow-x: hidden; */
+    overflow-x: hidden;
 }
 header {
     height: 100px;background: #000;
@@ -220,4 +220,67 @@ primeiro de tudo montar a estrutura pra isso acontecer
 }
 .section-projects-fotos .section-projects-foto-info h5 {
     font-size: 18px;font-weight: 600;text-transform: uppercase;
+}
+.default.bg-team {
+    background-image: url(../images/bg.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 0;
+}
+.section-team-area {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 50px 0;
+}
+
+.section-team {
+    overflow: hidden;
+    max-width: 880px;
+    /* max-width: 580px; */  /* exibir 2 */
+    /* max-width: 280px; */  /* exibir 3 */
+    margin: auto;
+}
+.section-team .sliders {
+    width: 1000vw; height: 100%;
+}
+.section-team .slide {
+    width: 280px;height: 100%;display: inline-block;
+    margin-right: 20px;min-height: 300px;
+    background-color: var(--branco);
+}
+.section-team .slide .slide-area {
+    height: 100%;color: var(--preto);padding: 30px;
+    display: flex;align-items: center;justify-content: center;flex-direction: column;
+}
+.section-team-area .sliders-pointers {
+    height: 20px;margin-top: 30px;
+    display: flex;justify-content: center;align-items: center;
+}
+.section-team-area .pointer {
+    width: 15px;height: 15px;margin: 0 5px;cursor: pointer;
+    border: 2px solid var(--marrom-padrao);border-radius: 8px;
+}
+.section-team-area .pointer.active {
+    background-color: var(--marrom-padrao);
+}
+
+.section-team-avatar {
+    width: 150px;height: auto;
+}
+.section-team-name {
+    text-transform: uppercase;font-weight: 600;font-size: 17px;
+    margin-top: 30px;
+}
+.section-team-role {
+    font-size: 14px;color: #999;margin-top: 5px;
+}
+.section-team-social {
+    display: flex; margin-top: 20px;
+}
+.section-team-social a {
+    display: inline-flex;justify-content: center;align-items: center;
+    width: 25px;height: 25px;border-radius: 13px;margin-right: 10px;
+    background: #ccc;
+}
+.section-team-social a:hover {
+    background: var(--marrom-padrao);
 }
