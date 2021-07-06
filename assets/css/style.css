@@ -34,6 +34,9 @@ header {
     width: 80px;height: 80px;background-color: var(--marrom-padrao); 
     border-radius: 40px;
 }
+.menu-opener {
+    display: none;
+}
 .menu {
     flex: 1; display: flex;justify-content:flex-end;
 }
@@ -669,4 +672,224 @@ footer {
     color:#FFF;
     font-size:14px;
     text-align:center;
+}
+
+
+/* 
+Tablet 768 = 800px
+Celular 375 / 414 => 450px
+*/
+/* (min-width: 450px) and */
+@media (max-width: 800px) {
+
+    .logo {
+        padding-left: 20px;
+    }
+
+    .menu-opener {
+        display: block;
+        width: 45px;
+        margin-right: 30px;
+    }
+    nav {
+        display: none;
+        position: absolute;
+        z-index: 99;
+        background-color: rgba(0, 0, 0, 0.9);
+        width: 70vw;
+        height: calc(100vh - 100px);
+        top: 100px;
+        right: 0;
+    }
+    .menu ul {
+        flex-direction: column;
+    }
+    .menu li a {
+        height: 80px;
+        font-size: 27px;
+        margin-left: 50px;
+        border: 0;
+    }
+    .menu .active a, 
+    .menu li a:hover {
+        border: 0;
+        color: var(--marrom-padrao);
+    }
+
+    .section-aboutus {
+        flex-direction: column;
+    }
+    .section-aboutus .section-aboutus--left {
+        margin: 30px;
+    }
+    .section-aboutus .section-aboutus--right {
+        width: auto;
+    }
+    .section-services {
+        flex-wrap: wrap;
+    }
+    .section-services .section-service {
+        min-width: 50%;
+        margin-bottom: 50px;
+    }
+    .section-services .section-service:first-child {
+        border-left: 0;
+    }
+    
+    .section-team {
+        width: 580px;
+    }
+
+    .section-companies--area {
+        flex-wrap: wrap;
+    }
+    .section-company {
+        padding: 20px 0;
+        min-width: 30%;
+    }
+
+    
+    .section-price {
+        flex-wrap: wrap;
+    }
+    .section-price--item {
+        min-width: 40%;
+        margin: 20px;
+        padding: 30px 0;
+    }
+    .section-price--item:last-child {
+        margin-right: 20px;
+    }
+
+
+    .section-premium .slidearea {
+        flex-direction: column;
+    }
+    .section-premium--left {
+        padding: 0 30px;
+        margin-bottom: 70px;
+    }
+    .section-premium--left img {
+        width: auto;
+        margin-right: 0px;
+        max-width: 100%;
+    }
+
+    .section-facts {
+        /* flex-direction: column; */
+        flex-wrap: wrap;
+    }
+    .section-fact {
+        padding: 35px;
+        min-width: 40%;
+    }
+
+
+
+} /* final media tablet */
+
+
+/*  Celular 375 / 414 => 450px */
+@media (max-width: 450px) {
+
+    nav {
+        width: 80vw;
+    }
+    .menu li a {
+        height: 60px;
+        font-size: 20px;
+        margin-left: 30px;
+    }
+
+    .banner h1 {
+        font-size: 30px;
+    }
+    .banner h2 {
+        margin-top: 17px;
+    }
+    
+    .section-aboutus .section-aboutus--right {
+        padding: 30px;
+    }
+
+    .section-services .section-service {
+        min-width: 90%;
+        margin-bottom: 30px;
+    }
+
+
+    .section-projects-filters {
+        margin: 0 30px;
+    }
+    .section-projects-fotos .section-projects-foto {
+        width: 320px;
+    }
+    .section-projects-fotos .section-projects-foto-area {
+        width: 300px;
+        height: 190px;
+    }
+
+    .section-projects-filters {
+        background: none;
+        border: 0;
+    }
+    .section-projects-filters li {
+        border: 3px solid #eee;
+        margin: 6px;
+    }
+    .section-projects-filters li:first-child {
+        border-left: 3px solid #eee;;
+    }
+    .section-projects-filters li.active, 
+    .section-projects-filters li:hover {
+        border: 3px solid var(--marrom-padrao);
+    }
+
+    .section-team {
+        width: 280px;
+    }
+
+    .section-company {
+        min-width: 40%;
+    }
+
+    .section-premium--right {
+        padding: 0 30px;
+    }
+
+    .section-fact {
+        min-width: 60%;
+    }
+
+    .section-share--legend,
+    .section-share--item {
+        margin-bottom: 20px;
+    }
+
+    .section-contact {
+        padding: 0 30px;
+    }
+    .section-contact--split {
+        flex-direction: column;
+    }
+
+    .section-map {
+        padding: 0 0 300px 0;
+    }
+    .section-map-info {
+        width: 100%;
+    }
+
+    /* feito agora */
+    .footer--area {
+        flex-direction: column;
+    }
+    .footer--item {
+        margin-bottom: 20px;
+    }
+    .footer-social {        
+        justify-content: center;
+    }
+
+
 }
